@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - GPS Map Camera</title>
+  <meta name="description" content="Privacy Policy for GPS Map Camera. Learn how our local-first architecture protects your photos, videos, and location data with zero cloud servers.">
+  <meta name="author" content="GPS Map Camera Team">
+  
+  <!-- Modern Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+
+      --primary: #EA6506;
+      --primary-hover: #D85600;
+      --primary-glow: rgba(234, 101, 6, 0.28);
+      --accent-coral: #FF6B3D;
+      --accent-emerald: #10B981;
+
+      --bg-main: #0B0E14;
+      --bg-surface: #121824;
+      --bg-card: rgba(22, 30, 46, 0.75);
+      --bg-card-hover: rgba(30, 41, 59, 0.85);
+      --border-color: rgba(255, 255, 255, 0.08);
+      --border-glow: rgba(234, 101, 6, 0.35);
+      --text-main: #F8FAFC;
+      --text-muted: #94A3B8;
+      --text-subtle: #64748B;
+      --nav-bg: rgba(11, 14, 20, 0.88);
+      --badge-bg: rgba(234, 101, 6, 0.12);
+      --badge-border: rgba(234, 101, 6, 0.3);
+      --callout-bg: rgba(16, 185, 129, 0.08);
+      --callout-border: rgba(16, 185, 129, 0.25);
+    }
+
+    [data-theme="light"] {
+      --bg-main: #FBFBFA;
+      --bg-surface: #FFFFFF;
+      --bg-card: rgba(255, 255, 255, 0.9);
+      --bg-card-hover: rgba(241, 245, 249, 0.95);
+      --border-color: rgba(0, 0, 0, 0.08);
+      --border-glow: rgba(234, 101, 6, 0.3);
+      --text-main: #0F172A;
+      --text-muted: #475569;
+      --text-subtle: #94A3B8;
+      --nav-bg: rgba(251, 251, 250, 0.9);
+      --badge-bg: rgba(234, 101, 6, 0.08);
+      --badge-border: rgba(234, 101, 6, 0.25);
+      --callout-bg: rgba(16, 185, 129, 0.06);
+      --callout-border: rgba(16, 185, 129, 0.2);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(234, 101, 6, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 90% 80%, rgba(99, 102, 241, 0.05) 0%, transparent 40%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    a:hover {
+      color: var(--primary-hover);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* -------------------------------------------------------------------------- */
+    /* Header & Navigation                                                        */
+    /* -------------------------------------------------------------------------- */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      background: var(--nav-bg);
+      border-bottom: 1px solid var(--border-color);
+      transition: all 0.3s ease;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 1.35rem;
+      color: var(--text-main);
+      text-decoration: none;
+    }
+
+    .brand-logo:hover {
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 16px var(--primary-glow);
+      overflow: hidden;
+      background: #1A252F;
+      color: #FFFFFF;
+      font-size: 1.25rem;
+    }
+
+    .brand-mark img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+      display: block;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      list-style: none;
+    }
+
+    .nav-link {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      transition: color 0.2s ease;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: var(--text-main);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .theme-toggle-btn {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .theme-toggle-btn:hover {
+      border-color: var(--primary);
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 9px 18px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent-coral) 100%);
+      color: #FFFFFF;
+      font-weight: 700;
+      font-size: 0.88rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px var(--primary-glow);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      text-decoration: none;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(234, 101, 6, 0.4);
+      color: #FFFFFF;
+      text-decoration: none;
+    }
+
+    /* -------------------------------------------------------------------------- */
+    /* Content Layout                                                             */
+    /* -------------------------------------------------------------------------- */
+    .policy-wrapper {
+      padding-top: 130px;
+      padding-bottom: 90px;
+    }
+
+    .policy-card-container {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .policy-header {
+      margin-bottom: 40px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .policy-title {
+      font-family: var(--font-heading);
+      font-size: 2.8rem;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+    }
+
+    .policy-meta {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .key-callout-box {
+      background: var(--callout-bg);
+      border: 1px solid var(--callout-border);
+      border-radius: 20px;
+      padding: 24px;
+      margin: 28px 0;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .callout-icon {
+      font-size: 1.5rem;
+      line-height: 1;
+    }
+
+    .policy-body {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 28px;
+      padding: 44px;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .policy-section {
+      margin-bottom: 42px;
+    }
+
+    .policy-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .policy-section h2 {
+      font-family: var(--font-heading);
+      font-size: 1.65rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .policy-section h3 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin: 24px 0 12px;
+    }
+
+    .policy-section p {
+      color: var(--text-muted);
+      font-size: 1rem;
+      margin-bottom: 16px;
+    }
+
+    .policy-section ul {
+      margin: 12px 0 20px 24px;
+      color: var(--text-muted);
+    }
+
+    .policy-section li {
+      margin-bottom: 10px;
+      line-height: 1.65;
+    }
+
+    .policy-section strong {
+      color: var(--text-main);
+    }
+
+    .code-pill {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      padding: 2px 8px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      color: var(--primary);
+    }
+
+    /* -------------------------------------------------------------------------- */
+    /* Footer                                                                     */
+    /* -------------------------------------------------------------------------- */
+    .footer {
+      background: var(--bg-surface);
+      border-top: 1px solid var(--border-color);
+      padding: 60px 0 32px;
+      margin-top: 80px;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 48px;
+      margin-bottom: 48px;
+      flex-wrap: wrap;
+    }
+
+    .footer-brand {
+      max-width: 360px;
+    }
+
+    .footer-brand p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin: 16px 0 16px;
+      line-height: 1.6;
+    }
+
+    .footer-contact {
+      font-size: 0.88rem;
+      color: var(--text-subtle);
+    }
+
+    .footer-contact a {
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .footer-nav-groups {
+      display: flex;
+      gap: 64px;
+      flex-wrap: wrap;
+    }
+
+    .footer-col h5 {
+      font-family: var(--font-heading);
+      font-size: 0.95rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+      color: var(--text-main);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: var(--primary);
+    }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 28px;
+      border-top: 1px solid var(--border-color);
+      font-size: 0.85rem;
+      color: var(--text-subtle);
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-bottom-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .footer-bottom-links a {
+      color: var(--text-subtle);
+      transition: color 0.2s;
+    }
+
+    .footer-bottom-links a:hover {
+      color: var(--primary);
+    }
+
+    @media (max-width: 768px) {
+      .nav-menu {
+        display: none;
+      }
+      .policy-title {
+        font-size: 2.1rem;
+      }
+      .policy-body {
+        padding: 24px;
+      }
+      .footer-top {
+        flex-direction: column;
+        gap: 36px;
+      }
+      .footer-nav-groups {
+        gap: 40px;
+        width: 100%;
+        justify-content: space-between;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        gap: 14px;
+        text-align: center;
+      }
+      .footer-bottom-links {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="brand-logo">
+          <div class="brand-mark">
+            📷
+          </div>
+          <div>
+            <span>GPS Map Camera</span>
+          </div>
+        </a>
+
+        <nav>
+          <ul class="nav-menu">
+            <li><a href="#overview" class="nav-link">Overview</a></li>
+            <li><a href="#permissions" class="nav-link">Permissions</a></li>
+            <li><a href="#storage" class="nav-link">Data Security</a></li>
+            <li><a href="privacy_policy.html" class="nav-link active" style="color: var(--primary);">Privacy Policy</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle theme">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="themeIcon">
+              <circle cx="12" cy="12" r="5"/>
+              <line x1="12" y1="1" x2="12" y2="3"/>
+              <line x1="12" y1="21" x2="12" y2="23"/>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+              <line x1="1" y1="12" x2="3" y2="12"/>
+              <line x1="21" y1="12" x2="23" y2="12"/>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+          </button>
+          <a href="#" class="btn-primary">
+            <span>📷 Get Camera App</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <main class="policy-wrapper">
+    <div class="container">
+      <div class="policy-card-container">
+        <div class="policy-header">
+          <h1 class="policy-title">Privacy Policy</h1>
+          <div class="policy-meta">
+            <span><strong>Effective Date:</strong> October 19, 2026</span>
+            <span><strong>Product:</strong> GPS Map Camera Pro</span>
+            <span><strong>Contact:</strong> <a href="mailto:support@gpsmapcamera.app">support@gpsmapcamera.app</a></span>
+          </div>
+        </div>
+
+        <div class="policy-body">
+          <p>Welcome to <strong>GPS Map Camera</strong> (&ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;). We are deeply committed to protecting your privacy and ensuring you have complete sovereignty over your captured photos, videos, and geographical data. This Privacy Policy explains how GPS Map Camera handles your device data and permissions when you use our mobile application (the &ldquo;App&rdquo;).</p>
+          <p>GPS Map Camera is an on-device, local-first geotagging camera application designed for personal travel, engineering fieldwork, project reporting, and on-site documentation. Unlike traditional cloud-connected camera apps, <strong>we do not operate proprietary servers, cloud databases, or remote user tracking backends</strong>. All media, GPS logs, addresses, and inspection reports remain under your exclusive control on your local device.</p>
+
+          <div class="key-callout-box">
+            <div class="callout-icon">🔒</div>
+            <div>
+              <strong style="color: var(--accent-emerald); font-size: 1.05rem;">Zero Cloud Server Architecture</strong>
+              <p style="margin: 4px 0 0; font-size: 0.95rem;">We do not host remote databases, user registration backends, or behavioral advertising trackers. Your photos, videos, and GPS coordinates never leave your device without your explicit sharing action.</p>
+            </div>
+          </div>
+
+          <section class="policy-section" id="overview">
+            <h2>1. Summary of Key Principles</h2>
+            <ul>
+              <li><strong>Local-First Storage:</strong> All captured photos, high-resolution videos, stamped overlays, journey routes, and before/after comparison pairs are stored locally on your device storage (DCIM/Gallery or custom user folders).</li>
+              <li><strong>No Remote User Accounts:</strong> You do not need to register, create an account, provide an email address, or log into our servers to use any feature of the App.</li>
+              <li><strong>Real-Time On-Device Geotagging:</strong> GPS coordinate calculations, Plus Code generation, compass orientation, altitude readings, and timestamp overlays are rendered directly on your device CPU/GPU at the moment of capture.</li>
+              <li><strong>Transparent Permission Usage:</strong> We only request system permissions (Camera, Location, Storage, Microphone) that are strictly necessary to provide live camera viewfinder, geotagging stamps, and video audio recording.</li>
+            </ul>
+          </section>
+
+          <section class="policy-section" id="permissions">
+            <h2>2. Information and Permissions We Access & Why</h2>
+
+            <h3>A. Camera Permission</h3>
+            <ul>
+              <li><strong>Permissions Requested:</strong> <span class="code-pill">android.permission.CAMERA</span> and associated hardware features (<span class="code-pill">android.hardware.camera</span>, <span class="code-pill">android.hardware.camera.autofocus</span>).</li>
+              <li><strong>Purpose:</strong> To operate the live camera preview, enable manual/auto focus, adjust exposure and white balance, and capture high-resolution photos and videos. It also supports concurrent dual-camera recording on compatible devices.</li>
+              <li><strong>Processing:</strong> The camera feed is processed entirely in your device's memory to rasterize and composite the active GPS/map stamp onto the final media file. The raw feed is never streamed, broadcast, or sent to external servers.</li>
+            </ul>
+
+            <h3>B. Location Permissions (GPS & Coordinates)</h3>
+            <ul>
+              <li><strong>Permissions Requested:</strong> <span class="code-pill">android.permission.ACCESS_FINE_LOCATION</span> and <span class="code-pill">android.permission.ACCESS_COARSE_LOCATION</span>.</li>
+              <li><strong>Purpose:</strong> To retrieve your current geographical coordinates (latitude, longitude, elevation/altitude, heading/bearing, and GPS accuracy) and embed them into your chosen stamp template, watermark, and metadata.</li>
+              <li><strong>Reverse Geocoding:</strong> To display human-readable street names, localities, administrative areas, and country names, the App performs reverse geocoding using native Android/iOS system services or direct geocoding endpoints.</li>
+              <li><strong>Manual Location Mode:</strong> If you prefer not to use live GPS, you can select or input custom manual coordinates/addresses from the built-in location editor. Live location access can be revoked at any time in system settings without breaking offline manual capture.</li>
+              <li><strong>Storage:</strong> Location data is saved only as part of the image pixels/video frames and standard local EXIF metadata of the files you capture. It is never uploaded to any analytics or server log.</li>
+            </ul>
+
+            <h3>C. Storage & Photo Gallery Permissions</h3>
+            <ul>
+              <li><strong>Permissions Requested:</strong> <span class="code-pill">android.permission.READ_MEDIA_IMAGES</span>, <span class="code-pill">android.permission.READ_MEDIA_VIDEO</span>, <span class="code-pill">android.permission.READ_MEDIA_AUDIO</span>, <span class="code-pill">android.permission.ACCESS_MEDIA_LOCATION</span> (Android 13+) and legacy <span class="code-pill">READ_EXTERNAL_STORAGE</span> / <span class="code-pill">WRITE_EXTERNAL_STORAGE</span> (pre-Android 13).</li>
+              <li><strong>Purpose:</strong> To save your stamped photos, recorded videos, comparison photos, and generated PDF/Excel reports to your public DCIM/Gallery directory (<span class="code-pill">DCIM/GPS Map Camera</span>) or user-selected custom storage folders, and to display captured thumbnails within the in-app gallery.</li>
+              <li><strong>User Data Control:</strong> The App only accesses photos created by the App or specifically chosen by you for side-by-side comparison or inspection report generation. We never scan, index, or upload your private photo albums.</li>
+            </ul>
+
+            <h3>D. Audio & Microphone Permission</h3>
+            <ul>
+              <li><strong>Permissions Requested:</strong> <span class="code-pill">android.permission.RECORD_AUDIO</span>.</li>
+              <li><strong>Purpose:</strong> To record audio track audio when recording videos in video mode with sound enabled.</li>
+              <li><strong>Optional:</strong> Sound recording can be muted at any time using the in-camera sound toggle. When muted, videos are encoded with an empty/silent audio track, and microphone input is ignored.</li>
+            </ul>
+
+            <h3>E. Internet & Network State</h3>
+            <ul>
+              <li><strong>Permissions Requested:</strong> <span class="code-pill">android.permission.INTERNET</span> and <span class="code-pill">android.permission.ACCESS_NETWORK_STATE</span>.</li>
+              <li><strong>Purpose:</strong> Used solely to load interactive Google Map tiles inside stamps, retrieve geocoded place names, and download offline translation language models via Google ML Kit on your initial setup.</li>
+              <li><strong>Offline Capability:</strong> The App is fully functional offline. When offline, stamps use cached map previews, offline GPS coordinates, and existing placemarks without requiring active internet connectivity.</li>
+            </ul>
+
+            <h3>F. Motion Sensors (Accelerometer & Compass)</h3>
+            <ul>
+              <li><strong>Purpose:</strong> To calculate real-time roll/pitch angles for the camera horizon level indicator, determine device orientation for upright stamp placement, and display cardinal compass headings (e.g., &plusmn;210&deg; SW).</li>
+              <li><strong>Processing:</strong> Sensor data is processed entirely in memory at 30Hz and is never logged, stored, or transmitted remotely.</li>
+            </ul>
+          </section>
+
+          <section class="policy-section" id="storage">
+            <h2>3. Data Storage, Security & Retention</h2>
+            <p>Because GPS Map Camera is built with a local-first design philosophy, your security and privacy are fundamentally protected by design:</p>
+            <ul>
+              <li><strong>Sandboxed Operating System Security:</strong> All user preferences, template custom configurations, and custom note entries are stored using encrypted/sandboxed local key-value storage (GetStorage) protected by Android/iOS platform isolation.</li>
+              <li><strong>No Remote Tracking or Telemetry:</strong> We do not include third-party advertising SDKs, behavioral analytics trackers, user profiling tools, or remote session recording frameworks.</li>
+              <li><strong>Local File Deletion:</strong> Deleting a captured photo, video, journey record, or inspection report within the in-app gallery or files manager deletes it directly from your physical storage.</li>
+            </ul>
+          </section>
+
+          <section class="policy-section">
+            <h2>4. Sharing of Information</h2>
+            <p><strong>We do not sell, rent, trade, monetise, or transmit your personal data, media, or location to third parties.</strong></p>
+            <p>Any sharing of media, reports, or coordinates is strictly <strong>user-initiated</strong>:</p>
+            <ul>
+              <li>When you tap the <strong>Share</strong> button on a captured photo, video, or PDF report, the App invokes the native Android/iOS system share sheet (e.g., WhatsApp, Email, Google Drive, or File Manager).</li>
+              <li>The file is transferred directly to the third-party application you explicitly select, governed by that recipient service's own privacy policy.</li>
+            </ul>
+          </section>
+
+          <section class="policy-section">
+            <h2>5. Third-Party Services</h2>
+            <p>The App integrates with standard industry platform APIs to deliver map tiles and geocoding:</p>
+            <ul>
+              <li><strong>Google Maps & Geocoding:</strong> Map previews and reverse-geocoded place names are provided via Google Maps Platform APIs, subject to the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.</li>
+              <li><strong>Google ML Kit:</strong> On-device text and date translation models run locally on your phone without sending source text to external cloud servers.</li>
+            </ul>
+          </section>
+
+          <section class="policy-section">
+            <h2>6. Children's Privacy</h2>
+            <p>Our application is not targeted at children under the age of 13. We do not collect personal information from any user, including children. Parents and guardians can be assured that all captured pictures and geographical data remain strictly on the local device.</p>
+          </section>
+
+          <section class="policy-section">
+            <h2>7. Changes to this Privacy Policy</h2>
+            <p>We may update this Privacy Policy from time to time to reflect new camera features, system permission adjustments, or updated platform legal requirements. Any modifications will be posted here with an updated &ldquo;Effective Date&rdquo;. We recommend reviewing this page periodically.</p>
+          </section>
+
+          <section class="policy-section" id="contact">
+            <h2>8. Contact Us</h2>
+            <p>If you have any questions, feedback, or inquiries regarding this Privacy Policy or the security of your data, please contact our team at:</p>
+            <p>
+              <strong>Product:</strong> GPS Map Camera Pro<br>
+              <strong>Email:</strong> <a href="mailto:support@gpsmapcamera.app">support@gpsmapcamera.app</a><br>
+              <strong>Website:</strong> <a href="#">https://gpsmapcamera.app</a>
+            </p>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="brand-mark">
+              📷
+            </div>
+            <span>GPS Map Camera</span>
+          </a>
+          <p>
+            A local-first geotagging camera application. Real-time GPS stamps, compass bearings, high-definition video, and inspection reporting with 100% user data sovereignty.
+          </p>
+          <div class="footer-contact">
+            Contact: <a href="mailto:support@gpsmapcamera.app">support@gpsmapcamera.app</a>
+          </div>
+        </div>
+
+        <div class="footer-nav-groups">
+          <div class="footer-col">
+            <h5>Product</h5>
+            <ul class="footer-links">
+              <li><a href="#overview">Overview</a></li>
+              <li><a href="#permissions">Permissions</a></li>
+              <li><a href="#storage">Data Security</a></li>
+              <li><a href="#">Get on Google Play</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h5>Legal & Support</h5>
+            <ul class="footer-links">
+              <li><a href="privacy_policy.html" style="color: var(--primary);">Privacy Policy</a></li>
+              <li><a href="#contact">Contact Support</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 <strong>GPS Map Camera</strong>. All rights reserved.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="#overview">Overview</a>
+          <a href="privacy_policy.html" style="color: var(--primary);">Privacy Policy</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const themeToggleBtn = document.getElementById('themeToggleBtn');
+    const themeIcon = document.getElementById('themeIcon');
+    let currentTheme = localStorage.getItem('gpscamera_theme') || 'dark';
+
+    function applyTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('gpscamera_theme', theme);
+      currentTheme = theme;
+      if (theme === 'light') {
+        themeIcon.innerHTML = `<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>`;
+      } else {
+        themeIcon.innerHTML = `
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/>
+          <line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        `;
+      }
+    }
+    applyTheme(currentTheme);
+    themeToggleBtn.addEventListener('click', () => {
+      applyTheme(currentTheme === 'dark' ? 'light' : 'dark');
+    });
+  </script>
+</body>
+</html>
